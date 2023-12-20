@@ -1,0 +1,73 @@
+<mvc:View controllerName="project1.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:f="sap.f" 
+    xmlns:m="sap.m"
+    height="100%" 
+    xmlns:core="sap.ui.core"
+    xmlns="sap.uxap"
+    xmlns:form="sap.ui.layout.form">
+    <ObjectPageLayout id="detailPage"
+					 showTitleInHeaderContent="true"
+					alwaysShowContentHeader="false"
+					preserveHeaderStateOnScroll="false"
+					headerContentPinnable="true"
+					isChildPage="true"
+					upperCaseAnchorBar="false">
+				<headerTitle>
+					<ObjectPageDynamicHeaderTitle>
+						<expandedHeading>
+							<m:Title text="Inside DETAIL!!" wrapping="true" class="sapUiSmallMarginEnd"/>
+						</expandedHeading>
+						<actions>
+							<m:Button
+									text="Edit"
+									type="Emphasized"
+									press="toggleAreaPriority"/>
+							<m:Button
+									text="Delete"
+									type="Transparent"/>
+							<m:Button
+									text="Copy"
+									type="Transparent"/>
+							<m:Button
+									text="Toggle Footer"
+									type="Transparent"
+									press="onToggleFooter"/>
+							<m:Button
+									icon="sap-icon://action"
+									type="Transparent"/>
+						</actions>
+
+					</ObjectPageDynamicHeaderTitle>
+				</headerTitle>
+		<sections>
+			<ObjectPageSection title="General Information">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<form:SimpleForm
+								maxContainerCols="2"
+								editable="false"
+								layout="ResponsiveGridLayout"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content>
+									<m:Label text="Product ID"/>
+									<m:Text text="Text1"/>
+									<m:Label text="Description"/>
+									<m:Text text="Text2"/>
+									<m:Label text="Supplier"/>
+									<m:Text text="Text3"/>
+								</form:content>
+							</form:SimpleForm>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
+</mvc:View>
